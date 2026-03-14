@@ -1,0 +1,374 @@
+/* =====================
+   Global Styles
+   ===================== */
+
+body {
+  /* background-color: #fff0f5; */
+  background-color: #F6EEE9;
+  font-family: 'Spectral', serif;
+  margin: 0;
+  padding: 48px;
+  line-height: 1.6;
+  font-size: 1rem; /* base size for all text */
+}
+
+/* Layout */
+.wrapper {
+  display: flex;
+  gap: 60px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+    position: relative;
+}
+
+section::before {
+    content: "";
+    display: block;
+    height: 50px; /* space above the heading */
+    margin-top: -50px; /* negative to offset scroll */
+}
+
+#my work::before {
+    height: 100px;
+    margin-top: -100px;
+}
+
+/* =====================
+   Sidebar
+   ===================== */
+
+.sidebar {
+  width: 220px;
+  position: fixed;
+  top: 48px;
+  left: 48px;
+}
+
+@font-face {
+    font-family: 'BeastOfAvalon'; /* Choose a name for your font */
+    src: url('fonts/beast-of-avalon-font/BeastOfAvalon-OKmp.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'CurlyRibbons'; /* Choose a name for your font */
+    src: url('fonts/curly-ribbons-font/Curlyribbons-ywB5M.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.sidebar-name {
+  font-family: 'BeastOfAvalon', 'Spectral', serif;
+  font-size: 1.9rem;
+  margin-bottom: 50px; /* remove previous 50px */
+}
+
+.sidebar-name a {
+    text-decoration: none; /* removes underline */
+    color: inherit;        /* matches sidebar text color */
+    cursor: pointer;       /* optional: makes it look clickable */
+}
+
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-menu li {
+  margin-bottom: 18px;
+}
+
+.sidebar-menu a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 1rem; /* same as body text */
+}
+
+.sidebar-menu a.active {
+    color: #a65f87;          /* text color for contrast */
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  /* height: 100vh; makes footer push to bottom */
+}
+
+
+.sidebar-footer {
+  margin-top: 40px;;
+  font-size: 0.75rem;
+  color: #999;
+  letter-spacing: 0.03em;
+  opacity: 0.8;
+}
+
+/* =====================
+   Content
+   ===================== */
+
+.content {
+  margin-left: 280px;
+  max-width: 760px;
+  padding-top: calc(1.9rem + 20px);
+}
+
+h2 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
+section {
+  margin-bottom: 110px;
+}
+
+/* =====================
+   my work Section
+   ===================== */
+
+.work-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 60px;
+}
+
+h3 a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.work-tile img {
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+
+.work-tile p {
+  margin-bottom: 12px;
+}
+
+/* GitHub button */
+.github-button {
+  display: inline-block;
+  background-color: #c27aa2;
+  color: #F6EEE9;
+  padding: 8px 16px;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  margin-top: 8px;
+}
+
+.github-button:hover {
+  background-color: #a65f87;
+}
+
+#additional-projects {
+  display: none;
+}
+
+#additional-projects.show {
+  max-height: 1000px;
+}
+
+.projects-toggle {
+  text-align: center;
+  margin: 30px 0;
+  cursor: pointer;
+  color: #c27aa2;
+  font-size: inherit;
+}
+
+#toggle-projects {
+  font-size: inherit;
+  cursor: pointer;
+  display: inline-block;
+  transition: transform 0.3s ease;
+  color: #c27aa2;
+}
+
+#toggle-projects.rotate {
+  transform: rotate(180deg);
+}
+
+/* =====================
+   about me Section
+   ===================== */
+
+.about-image {
+  margin: 40px 0;
+  text-align: center;
+}
+
+.about-image img {
+  max-width: 50%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+  margin: 0 auto;
+}
+
+.about-image figcaption {
+  margin-top: 8px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* =====================
+   contact Section
+   ===================== */
+
+    /* Container for the form */
+  form {
+      max-width: 500px;
+      margin: 2rem auto;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      font-family: inherit; /* Match the rest of your site */
+      text-align: left;     /* Left-align labels and inputs */
+  }
+
+  /* Labels */
+  form label {
+      font-weight: 600;
+      display: block;       /* Ensure they stay above inputs */
+      margin-bottom: 4px;
+  }
+
+  .form-row {
+      display: flex;
+      align-items: center;
+      gap: 15px;        /* more space between label and input */
+      margin-bottom: 16px; /* space between rows */
+  }
+
+  .form-row label {
+      width: 80px; /* fixed width for labels */
+      font-weight: normal;
+  }
+
+  /* Text inputs and textarea */
+  form input[type="text"],
+  form input[type="email"],
+  form textarea {
+      padding: 8px 12px;
+      border-radius: 6px;
+      border: 1px solid #f8e1f0;
+      font-size: 1rem;
+      font-family: inherit; /* Match site font */
+      width: 100%;
+      box-sizing: border-box;
+      transition: border-color 0.2s;
+      /* background-color: #f8e1f0;  light pink background */
+      background-color: #eedae5;
+      color: #a65f87;             /* darker pink text */
+  }
+
+
+  /* Focus effect */
+  form input[type="text"]:focus,
+  form input[type="email"]:focus,
+  form textarea:focus {
+      outline: none;
+      border-color: #c27aa2;
+  }
+
+  /* Submit button styled like your GitHub button */
+  form button {
+      display: inline-block;
+      background-color: #c27aa2;
+      color: #F6EEE9;
+      padding: 8px 16px;
+      text-decoration: none;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.2s;
+      font-family: inherit; /* Match site font */
+      align-self: flex-end; 
+  }
+
+
+
+  form button:hover {
+      background-color: #a65f87;
+  }
+
+  /* Optional: subtle textarea resize */
+  textarea {
+      resize: vertical;
+  }
+
+/* =====================
+          Footer
+   ===================== */
+
+.site-footer {
+  margin-top: 60px;               /* space above footer */
+  padding: 20px 48px;             /* match page padding */
+  background-color: #F6EEE9;      /* same as main background */
+  text-align: center;             /* center the text */
+  font-family: 'Spectral', serif; /* match site font */
+  font-size: 0.9rem;              /* slightly smaller for subtlety */
+  color: #555;                    /* calm gray text */
+  /* border-top: 1px solid #e0d7d9; subtle divider line */
+}
+
+.footer-header {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #c27aa2; /* pink accent for the header */
+  margin-bottom: 32px;
+}
+
+.footer-quote {
+  margin: 0;
+  font-style: italic;
+  line-height: 1.5;               /* more airy spacing between lines */
+}
+
+.footer-author {
+  display: block;      /* makes it appear on its own line */
+  margin-top: 8px;     /* space between quote and author */
+  font-style: normal;  /* keep it from italicizing again */
+  color: #555;
+}
+
+
+
+/* =====================
+   Mobile responsiveness
+   ===================== */
+
+@media (max-width: 768px) {
+
+  body {
+    padding: 28px;
+  }
+
+  .sidebar {
+    position: static;
+    margin-bottom: 40px;
+  }
+
+  .content {
+    margin-left: 0;
+    max-width: 100%;
+  }
+
+}
+
+
+

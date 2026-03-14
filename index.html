@@ -3,132 +3,221 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kamaljit Kaur Grewal - Software Developer</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .container {
-            text-align: center;
-            background: white;
-            padding: 40px 20px;
-            border-radius: 10px;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
-            max-width: 600px;
-            width: 100%;
-            margin: 20px;
-        }
-        
-        h1 {
-            font-size: clamp(2em, 8vw, 3em);
-            margin-bottom: 10px;
-            color: #667eea;
-        }
-        
-        .title {
-            font-size: clamp(1.2em, 5vw, 1.5em);
-            color: #764ba2;
-            margin-bottom: 30px;
-            font-weight: 500;
-        }
-        
-        .description {
-            font-size: clamp(1em, 4vw, 1.1em);
-            color: #555;
-            margin-bottom: 40px;
-            line-height: 1.8;
-        }
-        
-        .cta-button {
-            display: inline-block;
-            padding: 12px 30px;
-            margin: 10px 5px;
-            background: #667eea;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background 0.3s ease;
-            font-weight: 600;
-            font-size: clamp(0.9em, 3vw, 1em);
-        }
-        
-        .cta-button:hover {
-            background: #764ba2;
-        }
-        
-        .social-links {
-            margin-top: 40px;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 15px;
-        }
-        
-        .social-links a {
-            display: inline-block;
-            color: #667eea;
-            text-decoration: none;
-            font-weight: 600;
-            transition: color 0.3s ease;
-            font-size: clamp(0.9em, 3vw, 1em);
-        }
-        
-        .social-links a:hover {
-            color: #764ba2;
-        }
-        
-        @media (max-width: 768px) {
-            body {
-                padding: 20px;
-            }
-            
-            .container {
-                padding: 30px 20px;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            .container {
-                padding: 25px 15px;
-                margin: 10px;
-            }
-            
-            .cta-button {
-                display: block;
-                width: 100%;
-                margin: 10px 0;
-            }
-        }
-    </style>
+    <title>Kamaljit Grewal, Developer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@400;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <div class="container">
-        <h1>Kamaljit Kaur Grewal</h1>
-        <p class="title">Software Developer</p>
-        <p class="description">
-            Welcome to my portfolio. I'm passionate about creating elegant solutions to complex problems through clean, efficient code.
-        </p>
-        <a href="#portfolio" class="cta-button">View My Work</a>
-        <a href="#contact" class="cta-button">Get In Touch</a>
-        <div class="social-links">
-            <a href="#">GitHub</a>
-            <a href="#">LinkedIn</a>
-            <a href="#">Twitter</a>
+    <div class="wrapper">
+
+
+      <nav class="sidebar">
+        
+        <div class="sidebar-name"><a href="#">Kamaljit Grewal</a></div>
+        <!-- Menu Items Added Here -->
+        <ul class="sidebar-menu">
+          <li><a href="#my work">my work</a></li>
+          <li><a href="#about me">about me</a></li>
+          <li><a href="#contact">contact</a></li>
+        </ul>
+
+
+        <div class="sidebar-footer">
+          © 2026 Kamaljit Grewal
         </div>
+      </nav>
+
+      <main class="content">
+
+        <section id="my work">
+          <h2>favourite projects</h2>
+          
+          <div class="work-grid">
+
+            <!-- <div class="work-tile">
+              <img src="images/project1.jpg" alt="Project 1">
+              <h3>midnight shawarma</h3>
+              <p>A videogame where you work the night shift as a minimum wage cook at a shawarma restaurant,
+                taking orders, making wraps and platters, and serving human customers. Just watch out for the skinwalkers posing
+                as humans! Serve them and they will murder you.</p>
+              <p>Created with Godot Game Engine and Python.</p>
+              <a class="github-button" href="#">View on GitHub</a>
+            </div> -->
+
+            <!-- <div class="work-tile">
+              <img src="images/project1.jpg" alt="Project 2">
+              <h3>auntie kami's matchmaking service</h3>
+              <p>Fun fact: the name was inspired by two things. One is Auntie Sima, matchmaker and 
+                host of the Netflix series "Indian Matchmaking." Two is the Studio Ghibli film "Kiki's Delivery Service."</p>
+              <p>Created with React, Node.js, Express, and MongoDB. Hosted on AWS.</p>
+              <a class="github-button" href="#">View on GitHub</a>
+            </div> -->
+
+            <div class="work-tile">
+              <h3>
+                <a href="https://medical.sectra.com/" target="_blank">automation solutions and server script projects at sectra</a>
+              </h3>
+              <a href="https://medical.sectra.com/" target="_blank">
+                <img src="images/sectra medical.png" alt="sectra medical">
+              </a>
+              <p>Developed a C# automation solution using the SecureLink API to securely migrate confidential healthcare data for 900+ hospitals
+              and clinics across North America, saving 450+ engineering hours.</p>
+              <p>Reduced the execution time of validation scripts for client SQL servers by 66% by implementing multi-threading and fixing bugs.</p>
+              <p>Worked with C#, SQL Server, Powershell, Microsoft Azure, Git, and Jira.</p>
+            </div>
+
+              <div class="work-tile">
+                <h3>
+                  <a href="https://www.greencareer.ca/" target="_blank">the green career centre</a>
+                </h3>
+                <a href="https://www.greencareer.ca/" target="_blank">
+                  <img src="images/green career centre site.png" alt="home">
+                </a>
+                <p>Improved accessibility and usability for 3,000+ users by redesigning and developing a WCAG 2.1–compliant
+                  WordPress website. I also cut errors and sped up content delivery on three additional company sites
+                  by fixing 50+ bugs and adding features.</p>
+                <p>Worked with Wordpress, Javascript, Zapier, and ConvertKit.</p>
+                <a class="github-button" href="https://www.greencareer.ca/" target="_blank" rel="noopener noreferrer">View Website</a>
+              </div>
+
+              <div class="work-tile">
+                <h3>
+                <a href="https://goatvintage.ca/" target="_blank">GOAT vintage</a>
+              </h3>
+              <a href="https://goatvintage.ca/" target="_blank">
+                <img src="images/goat vintage site.png" alt="goat vintage website">
+              </a>
+                <p>Fixed bugs and added new features to the sustainable fashion brand's ecommerce website.</p>
+                <p>Worked with Shopify and Javascript.</p>
+                <a class="github-button" href="https://goatvintage.ca/" target="_blank" rel="noopener noreferrer">View Website</a>
+              </div>
+
+            <div id="additional-projects">
+
+            
+
+              <!-- <div class="work-tile">
+                <img src="images/project1.jpg" alt="Project 6">
+                <h3>teaching and research</h3>
+                <p></p>
+                <p>Created with .</p>
+                <a class="github-button" href="#">View on GitHub</a>
+              </div> -->
+
+              <!-- <div class="work-tile"> -->
+              <!-- <img src="images/project1.jpg" alt="Project 7"> -->
+              <!-- <h3>this personal portfolio website :)</h3> -->
+              <!-- <p>Features a responsive layout, smooth scrolling navigation, active section highlighting, and -->
+                <!-- async contact form submission.</p> -->
+              <!-- <p>Created with HTML, CSS, JavaScript, Git, GitHub Pages, and Formspree.</p> -->
+            <!-- </div> -->
+
+            </div> <!-- end of additional projects -->
+          
+          </div> <!-- end of div class work-grid -->
+
+          <!-- <div class="projects-toggle">
+            <span id="toggle-projects">▼ show additional projects ▼</span>
+          </div> -->
+
+        </section> <!-- end of section id my work -->
+
+        <!-- About Section -->
+        <section id="about me">
+          <h2>about me</h2>
+
+          <p>
+            Kamaljit Grewal is a developer who builds thoughtful digital experiences
+            that combine airy, playful aesthetics with clean and functional code.
+            She enjoys experimenting with new technologies and creating products that
+            feel both intuitive and engaging.
+          </p>
+
+          <p>
+            She has worked as a software developer, web designer and developer, educator,
+            and researcher across a range of fields. Her experience includes work in
+            medical imaging technology, cybersecurity, sustainable fashion, and environmental
+            non-profit initiatives, giving her a broad perspective on how technology
+            can support meaningful work.
+          </p>
+
+          <p>
+            Kamaljit holds an Honours B.A. in Computer Science from York University.
+          </p>
+
+          <p>
+            Outside of work, she enjoys volunteering at the food bank, family movie
+            nights, hikes, and solving zebra puzzles
+            (puzzles can be found
+            <a href="https://www.brainzilla.com/logic/zebra/" target="_blank">here</a>).
+          </p>
+
+          <!-- Image with clickable link -->
+          <figure class="about-image">
+            <a href="https://cvc.ca/discover-our-parks/limehouse-conservation-area/" target="_blank">
+              <img src="images/hole in the wall.jpg" alt="Hole in the Wall at Limehouse Conservation Area" />
+            </a>
+            <figcaption>My favourite hiking spot. Hole in the Wall at Limehouse Conservation Area. </figcaption>
+          </figure>
+
+        </section> <!-- end of section id about -->
+
+        <!-- Contact Section -->
+        <section id="contact">
+
+          <h2>contact</h2>
+
+            <p>
+              If you'd like to get in touch, please feel free to do so via the form below.
+              I'll get back to you as soon as I can!
+            </p>
+
+            <form action="https://formspree.io/f/mdawajkq" method="POST" id="contact-form">
+
+                <div class="form-row">
+                    <label for="name">from:</label>
+                    <input type="text" id="name" name="name" placeholder="your name" required>
+                </div>
+
+                <div class="form-row">
+                    <label for="email">email:</label>
+                    <input type="email" id="email" name="_replyto" placeholder="your email address" required>
+                </div>
+
+                <div class="form-row">
+                    <label for="message">message:</label>
+                    <textarea id="message" name="message" rows="5" placeholder="write your message here..." required></textarea>
+                </div>
+
+                <button type="submit">Send</button>
+
+                <p id="form-status" style="display:none; color: green; margin-top: 10px;">message sent!</p>
+
+            </form>
+            
+
+          
+        </section>
+
+        <footer class="site-footer">
+          <p class="footer-header">a quote i've been thinking about recently</p>
+          <p class="footer-quote">
+            "How happy is the blameless vestal's lot!
+            The world forgetting, by the world forgot.<br>
+            Eternal sunshine of the spotless mind!
+            Each pray'r accepted, and each wish resign'd."<br>
+            <span class="footer-author">&mdash; Alexander Pope, <em>Eloisa to Abelard</em></span>
+          </p>
+        </footer>
+
+
+      </main> <!-- end of main class content -->
+
+
     </div>
+
+  <script src="script.js" type="module"></script>
+
 </body>
 </html>
