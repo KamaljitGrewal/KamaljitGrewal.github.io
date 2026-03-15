@@ -42,7 +42,7 @@ const sidebarLinks = document.querySelectorAll(".sidebar-menu a");
 const observerOptions = {
     root: null,
     rootMargin: "0px",
-    threshold: 0.25 // 10% of section visible
+    threshold: 0.1 // 10% of section visible
 };
 
 const observer = new IntersectionObserver((entries) => {
