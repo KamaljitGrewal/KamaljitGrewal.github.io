@@ -211,7 +211,7 @@ h3 a {
 }
 
 .about-image img {
-  max-width: 50%;
+  max-width: 70%;
   height: auto;
   border-radius: 8px;
   display: block;
@@ -316,14 +316,15 @@ h3 a {
    ===================== */
 
 .site-footer {
-  margin-top: 60px;               /* space above footer */
-  padding: 20px 48px;             /* match page padding */
+  margin-top: 110px;               /* space above footer */
+  /* padding: 20px 48px;             match page padding */
   background-color: #F6EEE9;      /* same as main background */
   text-align: center;             /* center the text */
   font-family: 'Spectral', serif; /* match site font */
   font-size: 0.9rem;              /* slightly smaller for subtlety */
   color: #555;                    /* calm gray text */
   /* border-top: 1px solid #e0d7d9; subtle divider line */
+  margin-bottom: 60px;
 }
 
 .footer-header {
@@ -334,10 +335,15 @@ h3 a {
 }
 
 .footer-quote {
-  margin: 0;
+  margin: 0 auto;
+  max-width: 650px;
   font-style: italic;
   line-height: 1.5;               /* more airy spacing between lines */
 }
+/* .footer-quote {
+  max-width: 650px;
+  margin: 0 auto;
+} */
 
 .footer-author {
   display: block;      /* makes it appear on its own line */
@@ -355,7 +361,7 @@ h3 a {
 @media (max-width: 768px) {
 
   body {
-    padding: 28px;
+    padding: 28px 28px 120px 28px;
   }
 
   .sidebar {
@@ -366,6 +372,10 @@ h3 a {
   .content {
     margin-left: 0;
     max-width: 100%;
+  }
+
+  .about-image img {
+    width: 90%;
   }
 
 }
@@ -413,9 +423,9 @@ h3 a {
     top: 0;
     background: #F6EEE9;
     text-align: center;
-    padding: 18px 0;
+    padding: 14px 0;
     font-family: 'BeastOfAvalon', 'Spectral', serif;
-    font-size: 1.6rem;
+    font-size: 2.2rem;
     z-index: 1000;
   }
 
@@ -433,7 +443,7 @@ h3 a {
     left: 50%;
     transform: translateX(-50%);
     background: #c27aa2;
-    color: white;
+    color: #F6EEE9;
     border: none;
     border-radius: 40px;
     padding: 14px 22px;
