@@ -37,6 +37,7 @@ form.addEventListener("submit", async function(event) {
 
 const sections = document.querySelectorAll("main section");
 const sidebarLinks = document.querySelectorAll(".sidebar-menu a");
+const mobileLinks = document.querySelectorAll('.mobile-menu a');
 
 // Use Intersection Observer to detect which section is in view
 const observerOptions = {
@@ -49,12 +50,22 @@ const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         const id = entry.target.getAttribute("id");
         const link = document.querySelector(`.sidebar-menu a[href="#${id}"]`);
+        const mobileLink = document.querySelector(`.mobile-menu a[href="#${id}"]`);
         if (entry.isIntersecting) {
             sidebarLinks.forEach(a => a.classList.remove("active"));
+            mobileLinks.forEach(link => link.classList.remove('active'));
             link.classList.add("active");
+            mobileLink.classList.add('active');
+
         }
     });
 }, observerOptions);
+
+
+
+
+
+
 
 // Observe each section
 sections.forEach(section => observer.observe(section));

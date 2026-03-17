@@ -4,13 +4,19 @@
 
 body {
   /* background-color: #fff0f5; */
-  background-color: #F6EEE9;
-  font-family: 'Spectral', serif;
+  background-color: #EAF4EA;
+  font-family: 'Sono';
   margin: 0;
   padding: 48px;
   line-height: 1.6;
   font-size: 1rem; /* base size for all text */
+  color: #92285F;
 }
+
+h2, h3 {
+  color: #92285F;
+}
+
 
 /* Layout */
 .wrapper {
@@ -47,6 +53,7 @@ section::before {
   position: fixed;
   top: 48px;
   left: 48px;
+  color: #92285F;
 }
 
 @font-face {
@@ -57,16 +64,25 @@ section::before {
 }
 
 @font-face {
-    font-family: 'CurlyRibbons'; /* Choose a name for your font */
-    src: url('fonts/curly-ribbons-font/Curlyribbons-ywB5M.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'Unicorn';
+  src: url('fonts/unicorn-beautifull-font/UnicornBeautifull-L3Kn4.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
+@font-face {
+  font-family: 'Sono';
+  src: url('fonts/Sono/Sono-VariableFont_MONO,wght.ttf') format('truetype');
+  font-weight: 200 800;
+  font-style: normal;
+}
+
+
 .sidebar-name {
-  font-family: 'BeastOfAvalon', 'Spectral', serif;
-  font-size: 1.9rem;
+  font-family: 'Sono', monospace;
+  font-size: 4.0rem;
   margin-bottom: 50px; /* remove previous 50px */
+  
 }
 
 .sidebar-name a {
@@ -92,7 +108,7 @@ section::before {
 }
 
 .sidebar-menu a.active {
-    color: #a65f87;          /* text color for contrast */
+    color: #4C9460;          /* text color for contrast */
 }
 
 .sidebar {
@@ -105,7 +121,7 @@ section::before {
 .sidebar-footer {
   margin-top: 40px;;
   font-size: 0.75rem;
-  color: #999;
+  color: #92285F;
   letter-spacing: 0.03em;
   opacity: 0.8;
 }
@@ -127,6 +143,15 @@ h2 {
   margin-bottom: 30px;
 }
 
+h1 {
+  color: #c27aa2;  /* pink accent */
+  font-family: 'Sono';
+  font-size: 4.0rem;
+  line-height: 1.0;
+  letter-spacing: -0.5px;
+  font-weight: 500;
+}
+
 section {
   margin-bottom: 110px;
 }
@@ -141,10 +166,18 @@ section {
   gap: 60px;
 }
 
-h3 a {
+#my-work h2 a {
   text-decoration: none;
   color: inherit;
-  cursor: pointer;
+}
+
+#my-work h2 a:visited {
+  color: inherit;
+}
+
+#my-work h2 a:hover {
+  text-decoration: none;
+  color: inherit;
 }
 
 .work-tile img {
@@ -161,7 +194,7 @@ h3 a {
 .github-button {
   display: inline-block;
   background-color: #c27aa2;
-  color: #F6EEE9;
+  color: #EAF4EA;
   padding: 8px 16px;
   text-decoration: none;
   border-radius: 6px;
@@ -183,7 +216,7 @@ h3 a {
 
 .projects-toggle {
   text-align: center;
-  margin: 30px 0;
+  margin: 50px 0 0px 0; /* top 50px, bottom 30px, keep spacing */
   cursor: pointer;
   color: #c27aa2;
   font-size: inherit;
@@ -221,7 +254,8 @@ h3 a {
 .about-image figcaption {
   margin-top: 8px;
   font-size: 0.9rem;
-  color: #555;
+  color: #92285F;
+  font-style: italic;
 }
 
 /* =====================
@@ -254,7 +288,7 @@ h3 a {
   }
 
   .form-row label {
-      width: 80px; /* fixed width for labels */
+      width: 100px; /* fixed width for labels */
       font-weight: normal;
   }
 
@@ -288,7 +322,7 @@ h3 a {
   form button {
       display: inline-block;
       background-color: #c27aa2;
-      color: #F6EEE9;
+      color: #EAF4EA;
       padding: 8px 16px;
       text-decoration: none;
       border: none;
@@ -318,11 +352,11 @@ h3 a {
 .site-footer {
   margin-top: 110px;               /* space above footer */
   /* padding: 20px 48px;             match page padding */
-  background-color: #F6EEE9;      /* same as main background */
+  background-color: inherit;      /* same as main background */
   text-align: center;             /* center the text */
-  font-family: 'Spectral', serif; /* match site font */
+  font-family: inherit; /* match site font */
   font-size: 0.9rem;              /* slightly smaller for subtlety */
-  color: #555;                    /* calm gray text */
+  color: inherit;                    /* calm gray text */
   /* border-top: 1px solid #e0d7d9; subtle divider line */
   margin-bottom: 60px;
 }
@@ -330,7 +364,7 @@ h3 a {
 .footer-header {
   font-weight: 600;
   font-size: 1rem;
-  color: #c27aa2; /* pink accent for the header */
+  color: inherit; /* pink accent for the header */
   margin-bottom: 32px;
 }
 
@@ -349,7 +383,7 @@ h3 a {
   display: block;      /* makes it appear on its own line */
   margin-top: 8px;     /* space between quote and author */
   font-style: normal;  /* keep it from italicizing again */
-  color: #555;
+  color: inherit;
 }
 
 
@@ -421,12 +455,22 @@ h3 a {
     display: block;
     position: sticky;
     top: 0;
-    background: #F6EEE9;
+    background: #EAF4EA;
     text-align: center;
     padding: 14px 0;
-    font-family: 'BeastOfAvalon', 'Spectral', serif;
-    font-size: 2.2rem;
+    font-family: inherit;
+    font-size: 4.0rem;
     z-index: 1000;
+  }
+
+  .mobile-menu a.active {
+    color: #4C9460;       /* same pink accent as desktop */
+  }
+
+  h1 {
+    font-size: 2.5rem; /* adjust to taste */
+    line-height: 1.2;  /* optional: tighten spacing */
+    padding-bottom: 16px;
   }
 
   .content {
@@ -443,7 +487,7 @@ h3 a {
     left: 50%;
     transform: translateX(-50%);
     background: #c27aa2;
-    color: #F6EEE9;
+    color: #EAF4EA;
     border: none;
     border-radius: 40px;
     padding: 14px 22px;
@@ -458,7 +502,7 @@ h3 a {
     bottom: -200px;
     left: 0;
     width: 100%;
-    background: #F6EEE9;
+    background: #EAF4EA;
     border-top: 1px solid #e0d7d9;
     text-align: center;
     padding: 20px 0;
