@@ -17,7 +17,6 @@ h2, h3 {
   color: #92285F;
 }
 
-
 /* Layout */
 .wrapper {
   display: flex;
@@ -78,14 +77,16 @@ section::before {
 }
 
 
-.sidebar-name {
+.sidebar-name, .mobile-name {
   font-family: 'Sono', monospace;
   font-size: 4.0rem;
-  margin-bottom: 50px; /* remove previous 50px */
-  
 }
 
-.sidebar-name a {
+.sidebar-name {
+  margin-bottom: 50px; /* remove previous 50px */
+}
+
+.sidebar-name a, .mobile-name a {
     text-decoration: none; /* removes underline */
     color: inherit;        /* matches sidebar text color */
     cursor: pointer;       /* optional: makes it look clickable */
@@ -200,6 +201,7 @@ section {
   border-radius: 6px;
   font-size: 1rem;
   margin-top: 8px;
+  font-weight: 550;
 }
 
 .github-button:hover {
@@ -218,7 +220,7 @@ section {
   text-align: center;
   margin: 50px 0 0px 0; /* top 50px, bottom 30px, keep spacing */
   cursor: pointer;
-  color: #c27aa2;
+  color: #4C9460;
   font-size: inherit;
 }
 
@@ -227,7 +229,7 @@ section {
   cursor: pointer;
   display: inline-block;
   transition: transform 0.3s ease;
-  color: #c27aa2;
+  color: #92285F;
 }
 
 #toggle-projects.rotate {
@@ -318,6 +320,11 @@ section {
       border-color: #c27aa2;
   }
 
+  ::placeholder {
+    color: #c27aa2; /* light pink */
+    opacity: 1;
+  }
+
   /* Submit button styled like your GitHub button */
   form button {
       display: inline-block;
@@ -332,6 +339,7 @@ section {
       transition: background-color 0.2s;
       font-family: inherit; /* Match site font */
       align-self: flex-end; 
+      font-weight: 550;
   }
 
 
@@ -457,20 +465,21 @@ section {
     top: 0;
     background: #EAF4EA;
     text-align: center;
-    padding: 14px 0;
+    padding: 8px 0;
     font-family: inherit;
     font-size: 4.0rem;
     z-index: 1000;
   }
 
   .mobile-menu a.active {
-    color: #4C9460;       /* same pink accent as desktop */
+    color: #4C9460;       /* same green accent as desktop */
   }
 
   h1 {
     font-size: 2.5rem; /* adjust to taste */
     line-height: 1.2;  /* optional: tighten spacing */
     padding-bottom: 16px;
+    margin-top: 0px;
   }
 
   .content {
