@@ -508,19 +508,20 @@ section {
   /* slide-up menu */
   .mobile-menu {
     position: fixed;
-    bottom: -200px;
+    bottom: 0;
     left: 0;
     width: 100%;
     background: #EAF4EA;
     border-top: 1px solid #e0d7d9;
     text-align: center;
     padding: 20px 0;
-    transition: bottom 0.3s ease;
+    transform: translateY(100%); /* fully hidden */
+    transition: transform 0.3s ease;
     display: block;
   }
 
   .mobile-menu.open {
-    bottom: 70px;
+    transform: translateY(0); /* slide up */
   }
 
   .mobile-menu a {
